@@ -1,0 +1,246 @@
+@import "../fonts/Comic Sans MS.ttf"
+$button: #32cfb6
+$input: #1db8a4
+$fafafa: #fafafa
+$help: #1ea992
+
+body 
+	margin: 0
+	padding: 0
+	font-family: Comic Sans MS
+a 
+	color: #ffffff
+	text-transform: uppercase
+	font-size: 18px
+	&:hover
+		color: #ffffff
+		opacity: 0.8
+h2 
+	text-transform: uppercase
+	text-align: center
+	font-size: 25px
+	color: #272f2f
+	font-weight: bold
+
+.container
+	max-width: 1153px
+	margin: 0 auto
+.header
+	background-image: url('../img/bg-header.png') 
+	background-size: 70% 100%
+	background-position: 100% 0
+	background-repeat: no-repeat
+	height: 100vh
+	.nav-item 
+		margin-top: 40px
+.header-content
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 100px
+	.header-left
+		width: 50%
+		max-width: 500px
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		margin-right: 100px
+		h2 
+			margin-bottom: 50px
+		.col-8
+			display: flex
+			flex-direction: column
+			max-width: 280px
+			input
+				border: 0
+				border-bottom: 2px solid $input
+				outline: 0
+				margin-bottom: 30px
+				width: 250px
+				background: none
+			button
+				padding: 7px 61px
+				max-width: 180px
+				margin: 0 auto
+				.btn
+				background: url('../img/BTN.jpg')
+				color: #fff
+				&:focus
+					box-shadow: none
+	.header-right
+		width: 50%
+		img 
+			max-width: 400px
+			margin-bottom: 60px
+.requirement
+	h2 
+		margin-bottom: 80px
+	.row
+		margin-bottom: 50px
+		justify-content: center
+		.col-sm-6
+			max-width: 280px
+			margin-bottom: 20px	
+			.card
+				background-color: $fafafa
+				border: 0
+				justify-content: center	
+				height: 320px
+				&-img 
+					text-align: center
+					height: 150px
+					padding: 5px
+					display: flex
+					align-items: center
+					img 
+						margin: 0 auto
+				&-body 
+					padding: 10px 17px
+					p
+					font-size: 14px
+.help
+	display: flex
+	background-color: $help
+	&-left 
+		display: block
+		height: auto
+		width: 45%
+		img 
+			width: 100%
+			height: auto
+	&-right 
+		width: 45%
+		color: #fff
+		margin: 0 auto
+		h2 
+			margin: 30px 0 35px 18px
+			text-align: left
+			color: #ffffff
+		ol 
+			list-style-type: none
+			counter-reset: num
+			li::before
+				content: counter(num) '. '
+				counter-increment: num
+				color: #fff
+				font-size: 45px
+			li 
+				height: max-content
+			li span 
+				max-width: 400px
+				position: relative
+				top: -58px
+				left: 53px
+				display: table-cell
+				padding-left: 20px
+				font-size: 14px
+			li:nth-child(even) 
+				padding-left: 80px
+.offer
+	h2 
+		margin: 50px 0 100px 0
+	.row
+		.col-sm-4
+			.card
+				text-align: center
+				margin-bottom: 20px
+				border: none
+				.card-img
+				@for $i from 1 to 7
+					.card-img-#{$i}
+						display: block
+						width: 165px
+						height: 160px
+						margin: 0 auto
+						background:
+							image: url('../img/#{$i}.png')
+							size: 70% 90%
+							position: 50% 0
+							repeat: no-repeat
+				@for $i from 1 to 7
+					.card-img-#{$i}:hover
+						background:
+							image: url('../img/hover#{$i}.png')	
+				&-text 
+					margin-top: 30px
+.contacts
+	background:
+		image: url('../img/bg-contacts.png')
+		size: cover
+		position: center 0
+		repeat: no-repeat
+	height: 450px
+	h2 
+		color: #fff
+		text-align: center
+		padding-top: 80px
+	.contacts-block
+		display: flex
+		justify-content: space-around
+		.form
+			width: 50%
+			max-width: 500px
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+			h2 
+				margin-bottom: 50px
+				font-size: 18px
+				padding-top: 45px
+			.col-8
+				display: flex
+				flex-direction: column
+				max-width: 280px
+				input
+					border: 0
+					border-bottom: 2px solid $input
+					outline: 0
+					margin-bottom: 30px
+					width: 250px
+					background: none
+					color: #fff
+				button
+					padding: 7px 61px
+					max-width: 180px
+					margin: 0 auto
+					.btn
+					background: url('../img/BTN.jpg')
+					color: #fff
+					&:focus
+						box-shadow: none
+		.addresses
+			color: #fff 
+			h2 
+				padding-top: 45px
+				font-size: 18px
+				margin-bottom: 50px
+			address
+				line-height: 2
+				margin-bottom: 27px	
+			.social
+				display: flex
+				a 
+					margin-right: 30px
+
+  
+    
+		
+			
+			
+			
+
+				
+	
+
+	 
+
+
+	
+	
+	
+	
+	
+
+	
