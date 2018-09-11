@@ -12,9 +12,7 @@ a
 	color: #ffffff
 	text-transform: uppercase
 	font-size: 18px
-	&:hover
-		color: #ffffff
-		opacity: 0.8
+	padding: 0
 h2 
 	text-transform: uppercase
 	text-align: center
@@ -30,17 +28,20 @@ h2
 	background-size: 70% 100%
 	background-position: 100% 0
 	background-repeat: no-repeat
-	height: 100vh
-	.nav-item 
-		margin-top: 40px
+	height: auto
+	.navbar
+		justify-content: flex-end
+	.navbar-collapse
+		justify-content: flex-end
+		.nav-link
+			color: #fff
 .header-content
 	display: flex
 	justify-content: center
 	align-items: center
-	margin-top: 100px
+	padding: 100px 0 60px 0
 	.header-left
 		width: 50%
-		max-width: 500px
 		display: flex
 		flex-direction: column
 		align-items: center
@@ -68,25 +69,26 @@ h2
 				color: #fff
 				&:focus
 					box-shadow: none
+				&:hover
+					opacity: 0.9
 	.header-right
-		width: 50%
 		img 
-			max-width: 400px
 			margin-bottom: 60px
+			max-width: 80%
 .requirement
+	padding: 50px 0
 	h2 
 		margin-bottom: 80px
 	.row
-		margin-bottom: 50px
 		justify-content: center
-		.col-sm-6
+		.card-content
 			max-width: 280px
 			margin-bottom: 20px	
 			.card
 				background-color: $fafafa
 				border: 0
 				justify-content: center	
-				height: 320px
+				height: 100%
 				&-img 
 					text-align: center
 					height: 150px
@@ -105,14 +107,12 @@ h2
 	&-left 
 		display: block
 		height: auto
-		width: 45%
 		img 
 			width: 100%
-			height: auto
+			height: 100%
 	&-right 
-		width: 45%
 		color: #fff
-		margin: 0 auto
+		padding-left: 0
 		h2 
 			margin: 30px 0 35px 18px
 			text-align: left
@@ -120,6 +120,7 @@ h2
 		ol 
 			list-style-type: none
 			counter-reset: num
+			padding-left: 0
 			li::before
 				content: counter(num) '. '
 				counter-increment: num
@@ -128,7 +129,6 @@ h2
 			li 
 				height: max-content
 			li span 
-				max-width: 400px
 				position: relative
 				top: -58px
 				left: 53px
@@ -141,7 +141,7 @@ h2
 	h2 
 		margin: 50px 0 100px 0
 	.row
-		.col-sm-4
+		.offer-container
 			.card
 				text-align: center
 				margin-bottom: 20px
@@ -170,7 +170,6 @@ h2
 		size: cover
 		position: center 0
 		repeat: no-repeat
-	height: 450px
 	h2 
 		color: #fff
 		text-align: center
@@ -178,8 +177,8 @@ h2
 	.contacts-block
 		display: flex
 		justify-content: space-around
+		padding-bottom: 30px
 		.form
-			width: 50%
 			max-width: 500px
 			display: flex
 			flex-direction: column
@@ -223,9 +222,88 @@ h2
 				display: flex
 				a 
 					margin-right: 30px
+					&:hover
+						opacity: 0.7
+	.map-responsive
+		overflow: hidden
+		padding-bottom: 30%
+		position: relative
+		height: 0
+		iframe
+			left: 0
+			top: 0
+			height: 100%
+			width: 100%
+			position: absolute
+	.footer
+		padding: 12px 0
+		p 
+			color: #fff 
+			text-align: center
+			text-transform: uppercase
+			margin-bottom: 0
 
-  
-    
+@media screen and (max-width: 1024px)  
+	.header
+		background-image: none
+		background-color: #1cb69d
+		.header-content
+			h2 
+				color: #fff
+			.header-left
+				input
+					border-bottom: 2px solid #fff
+					&::placeholder
+						color: #404040
+@media screen and (max-width: 890px)
+	.help-left
+		display: none
+	.help-right
+		h2 
+			text-align: center
+		ol 
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-around
+			li:nth-child(even)
+				padding-left: 0
+			li
+				span 
+					padding-left: 0
+@media screen and (max-width: 700px)
+	.header-content
+		flex-direction: column-reverse	
+		padding: 0 10%
+		.header-right
+			text-align: center
+		.header-left
+			width: 100%
+			margin:
+				right: 0
+				bottom: 30px
+	.contacts-block
+		flex-direction: column
+		align-items: center
+		padding-bottom: 30px
+		.social
+			justify-content: center
+	.help
+		.help-right
+			padding-right: 0
+			ol 
+				flex-direction: column	
+				align-items: center
+				li::before
+					font-size: 35px
+				li 
+					span 
+						position: relative
+						top: -45px
+						left: 40px
+						display: table-cell
+						padding-left: 0
+						font-size: 12px
+	
 		
 			
 			
